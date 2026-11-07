@@ -5,6 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public final class Db {
+    static {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+
     private Db() {}
 
     public static Connection getConnection() throws SQLException {
