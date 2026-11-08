@@ -10,4 +10,10 @@ public final class UiUtil {
         alert.setHeaderText(null);
         alert.showAndWait();
     }
+
+    public static void info(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
+        alert.setHeaderText(null);
+        alert.showAndWait();
+    }
 }
